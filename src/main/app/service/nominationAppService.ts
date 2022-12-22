@@ -3,7 +3,7 @@ import { NominationDomainService } from "../../domain/service/nominationDomainSe
 
 export class NominationAppService {
   nominationDomainService: NominationDomainService;
-  
+
   constructor(nominationDomainService: NominationDomainService) {
     this.nominationDomainService = nominationDomainService;
   }

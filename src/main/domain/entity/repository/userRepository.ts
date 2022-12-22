@@ -12,7 +12,7 @@ const db = async () => {
 export class UserRepository {
   findById = async (id: string) => {
     const dataBase = await db();
-    let user = new User();
+    const user = new User();
 
     return new Promise((resolve, reject) => {
       dataBase.all(
@@ -43,7 +43,7 @@ export class UserRepository {
 
   findByEmail = async (email: string) => {
     const dataBase = await db();
-    let user: Partial<User> = new User();
+    const user: Partial<User> = new User();
 
     return new Promise((resolve, reject) => {
       dataBase.get(

@@ -11,7 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/nodemailer": "^6.4.6",
     "bcryptjs": "^2.4.3",
     "class-validator": "^0.14.0",
     "cors": "^2.8.5",
@@ -33,6 +32,7 @@
     "@types/jest": "^29.2.4",
     "@types/jest-when": "^3.5.2",
     "@types/jsonwebtoken": "^8.5.9",
+    "@types/nodemailer": "^6.4.6",
     "@types/node": "^18.11.14",
     "@types/uuid": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.46.1",

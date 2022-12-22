@@ -7,11 +7,13 @@ import { UserDomainService } from "../../domain/service/userDomainService";
 import { NotifierController } from "../out/notifierController";
 
 export class NominationController {
-  private nominationAppService = new NominationAppService(new NominationDomainService(
-    new NominationRepository(),
-    new UserDomainService(new UserRepository()),
-    new NotifierController()
-  ));
+  private nominationAppService = new NominationAppService(
+    new NominationDomainService(
+      new NominationRepository(),
+      new UserDomainService(new UserRepository()),
+      new NotifierController()
+    )
+  );
 
   createNomination = async (req: Request, res: Response) => {
     await this.nominationAppService.createNomination(req, res);

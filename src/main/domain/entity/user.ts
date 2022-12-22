@@ -1,5 +1,5 @@
 import * as bcrypt from "bcryptjs";
-import { IsEmail, Length, Max, MaxLength, MinLength } from "class-validator";
+import { IsEmail, Length } from "class-validator";
 import { Role } from "./role";
 
 export class User {

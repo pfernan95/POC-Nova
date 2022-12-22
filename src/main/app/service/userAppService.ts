@@ -5,7 +5,7 @@ export class UserAppService {
   userDomainService: UserDomainService;
 
   constructor(userDomainService: UserDomainService) {
-    this.userDomainService = userDomainService
+    this.userDomainService = userDomainService;
   }
   createUser = async (req: Request, res: Response) => {
     const { name, surname, email, password, roles } = req.body;

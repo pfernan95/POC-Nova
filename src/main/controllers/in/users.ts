@@ -4,7 +4,9 @@ import { UserRepository } from "../../domain/entity/repository/userRepository";
 import { UserDomainService } from "../../domain/service/userDomainService";
 
 export class UserController {
-  private userAppService = new UserAppService(new UserDomainService(new UserRepository));
+  private userAppService = new UserAppService(
+    new UserDomainService(new UserRepository())
+  );
 
   createUser = async (req: Request, res: Response) => {
     await this.userAppService.createUser(req, res);

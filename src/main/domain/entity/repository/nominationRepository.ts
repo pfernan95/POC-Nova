@@ -1,9 +1,7 @@
 import { Database } from "sqlite3";
 import { connectDatabase } from "../../db/connection";
-import { Role } from "../role";
 import { v4 } from "uuid";
 import { Nomination } from "../nomination";
-import { resolve } from "path";
 
 const db = async () => {
   const dataBase = (await connectDatabase()) as unknown as Database;
@@ -13,7 +11,7 @@ const db = async () => {
 export class NominationRepository {
   findByEmail = async (email: string) => {
     const dataBase = await db();
-    let nomination: Partial<Nomination> = new Nomination();
+    const nomination: Partial<Nomination> = new Nomination();
 
     return new Promise((resolve, reject) => {
       dataBase.get(

@@ -9,9 +9,9 @@ export class AuthDomainService {
   userRepository: UserRepository;
 
   constructor(userRepository: UserRepository) {
-    this.userRepository = userRepository
-  };
-  
+    this.userRepository = userRepository;
+  }
+
   login = async (email: string, password: string, res: Response) => {
     let user: User | undefined;
     try {
