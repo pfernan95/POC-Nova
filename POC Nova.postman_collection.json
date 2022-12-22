@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "3540f99e-d8af-45c4-a698-ce93685a0aee",
+		"name": "POC Nova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"pfernan95@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pablo\",\n    \"surname\": \"Fernandez Jimenez\",\n    \"email\": \"noexiste3@icloud.com\",\n    \"password\": \"test123\",\n    \"roles\": [0, 1]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nominations",
+			"item": [
+				{
+					"name": "Create Nomination",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Prueba nomination\",\n    \"surname\": \"nominations\",\n    \"email\": \"testnominations@gmail.com\",\n    \"description\": \"This is a description test\",\n    \"involvement\": 8,\n    \"overall\": 8,\n    \"userEmail\": \"noexiste@icloud.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/nominations/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nominations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List accepted nominations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMWJlM2VkYy1kNzUwLTQwYTktYmU4ZC0zMGZkMDQ4OTFmYzEiLCJlbWFpbCI6InBmZXJuYW45NUBnbWFpbC5jb20iLCJleHBpcmVkQXQiOjE2NzE1ODEwNTIsImlhdCI6MTY3MTU3NzQ1MiwiZXhwIjoxNjcxNTgxMDUyfQ.Hbi4VG817Edybw_jSP6kQGvFcQDLbqkjQZIwGN2XnOM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/nominations/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nominations",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
