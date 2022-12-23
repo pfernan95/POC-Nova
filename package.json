@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest",
-    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts ."
+    "test": "jest --maxWorkers=50%",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "dev": "nodemon run dest/app.js"
   },
   "keywords": [],
   "author": "",

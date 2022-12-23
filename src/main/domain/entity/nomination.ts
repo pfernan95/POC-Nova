@@ -1,5 +1,4 @@
-import { Min, Max, IsEmail, IsInt, Length } from "class-validator";
-import { User } from "./user";
+import { Min, Max, IsEmail, IsInt, Length, IsNumber } from "class-validator";
 
 export class Nomination {
   id: string;
@@ -16,19 +15,17 @@ export class Nomination {
   @Length(20, 300)
   description: string;
 
-  @IsInt()
+  @IsNumber()
   @Min(0)
   @Max(10)
   involvement: number;
 
-  @IsInt()
+  @IsNumber()
   @Min(0)
   @Max(10)
   overall: number;
 
   status: string;
-
-  user: User;
 
   user_id: string;
 }
